@@ -8,8 +8,9 @@ class ViewController: UIViewController {
     
     private let logoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "shippingbox.fill") // Delivery theme
-        imageView.tintColor = .systemBlue
+        // Ícono de app de comida rápida (con fallback a bolsa de compras si el iPhone es muy antiguo)
+        imageView.image = UIImage(systemName: "takeoutbag.and.cup.and.straw.fill") ?? UIImage(systemName: "bag.circle.fill")
+        imageView.tintColor = .systemOrange // El naranja abre el apetito (color popular en delivery)
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -81,11 +82,11 @@ class ViewController: UIViewController {
         button.setTitle("Iniciar sesión", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        button.backgroundColor = .systemBlue
+        button.backgroundColor = .systemOrange
         button.layer.cornerRadius = 14
         
         // Shadow for premium look
-        button.layer.shadowColor = UIColor.systemBlue.cgColor
+        button.layer.shadowColor = UIColor.systemOrange.cgColor
         button.layer.shadowOffset = CGSize(width: 0, height: 4)
         button.layer.shadowOpacity = 0.3
         button.layer.shadowRadius = 8

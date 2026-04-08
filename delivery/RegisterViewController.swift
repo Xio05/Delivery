@@ -75,9 +75,9 @@ class RegisterViewController: UIViewController {
         button.setTitle("Registrarse", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        button.backgroundColor = .systemBlue
+        button.backgroundColor = .systemOrange
         button.layer.cornerRadius = 14
-        button.layer.shadowColor = UIColor.systemBlue.cgColor
+        button.layer.shadowColor = UIColor.systemOrange.cgColor
         button.layer.shadowOffset = CGSize(width: 0, height: 4)
         button.layer.shadowOpacity = 0.3
         button.layer.shadowRadius = 8
